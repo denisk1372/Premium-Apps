@@ -245,5 +245,20 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
+
+    <script>
+  // (firebaseConfig dan init sudah kamu tambahkan sebelumnya)
+
+  // Ambil dan tampilkan data produk dari Firestore
+  db.collection("produk").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+      const data = doc.data();
+      const container = document.getElementById("produk-container");
+      const item = document.createElement("div");
+      item.innerHTML = `<strong>${data.nama}</strong> - Rp ${data.harga}`;
+      container.appendChild(item);
+    });
+  });
+</script>
   </body>
 </html>
