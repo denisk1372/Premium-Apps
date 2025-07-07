@@ -223,5 +223,27 @@ document.getElementById('searchInput').addEventListener('keyup', function() {
   });
 </script>
 
+    // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBUWyJGPWTs4c-xJCavVSYnxRL7N-T58o8",
+  authDomain: "denz-store.firebaseapp.com",
+  projectId: "denz-store",
+  storageBucket: "denz-store.firebasestorage.app",
+  messagingSenderId: "552672773949",
+  appId: "1:552672773949:web:170bc1896734f852dea754",
+  measurementId: "G-9G8E19N2ET"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
   </body>
 </html>
